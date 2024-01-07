@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space tourism website</title>
+
+    <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script type="module" src="app/home.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <h1><a href="./index.html"><img src="assets/shared/logo.svg" alt="formato de estrela com funco branco"></a></h1>
+            
+            <div class="container-menu">
+                <button id="open-menu"><img src="assets/shared/icon-hamburger.svg" alt="icone de menu hamburger"></button>
+            </div>
+            
+            <nav>
+
+                <div class="container-navbar hidden">
+                    <div class="container-close-menu">
+                        <button id="button-close-menu"><img src="assets/shared/icon-close.svg" alt="icone de x"></button>
+                    </div>
+
+                    <ul class="list-links">
+                        <li>
+                            <a href="./index.html" class="active">
+                                <p class="numeration-link">00</p>
+                                <p class="name-link">Home</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./pages/destination.html">
+                                <p class="numeration-link">01</p>
+                                <p class="name-link">Destination</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./pages/crew.html">
+                                <p class="numeration-link">02</p>
+                                <p class="name-link">Crew</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./pages/technology.html">
+                                <p class="numeration-link">03</p>
+                                <p class="name-link">Technology</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="primary">
+            <div class="container-primary">
+                <div class="container-description">
+                    <h3>SO, YOU WANT TO TRAVEL TO</h3>
+                    <h2>SPACE</h2>
+                    <p>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+                </div>
+
+                <a href="./pages/destination.html" id="link-explore">Explore</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

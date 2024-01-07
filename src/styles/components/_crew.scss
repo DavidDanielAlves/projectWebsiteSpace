@@ -1,0 +1,92 @@
+@import '../base/variaveis/font';
+@import '../base/variaveis/crew.scss';
+
+.crew {
+    background-image: url('../../../src/assets/imgs/crew/background-crew-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+
+    main {
+        .crew {
+            .container-crew {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                h2 {
+                    display: flex;
+                    gap: 8px;
+                    text-transform: uppercase;
+                    font-family: $font-barlow-condensed;
+    
+                    p {
+                        font-size: 1em;
+                    }
+
+                    .paragraph-numeration {
+                        color: #979797;
+                        font-weight: 700;
+                    }
+    
+                    .paragraph-title {
+                        color: white;
+                    }
+                }    
+
+                img {
+                    width: 50%;
+                    margin-top: 10%;
+                }
+
+                hr {
+                    width: 90%;
+                    border-top: 1px solid #979797a5;
+                }
+
+                .container-pagination {
+                    width: 100%;
+                    display: flex;
+                    gap: 24px;
+                    justify-content: center;
+                    margin-top: 10%;
+
+                    .ball {
+                        width: 20px;
+                        height: 20px;
+                        background-color: #979797;
+                        border-radius: 100%;
+                    }
+
+                    .ball.active {
+                        background-color: white;
+                    }
+                }
+
+                .container-description {
+                    text-align: center;
+                    width: 90%;
+                    margin-top: 5%;
+
+                    #office {
+                        font-size: 1.1em;
+                        font-family: $font-bellefair;
+                        margin-bottom: 8px;
+                        color: #979797;
+                    }
+
+                    #name {
+                        font-size: 1.5em;
+                        font-family: $font-bellefair;
+                        text-transform: uppercase;
+                        color: white;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+

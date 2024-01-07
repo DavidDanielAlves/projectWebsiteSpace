@@ -1,0 +1,15 @@
+@import './variaveis/font';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: $size;
+    color: $text-ligth-blue;
+    font-family: $font-barlow;
+    font-weight: 400;
+    list-style-type: none;
+    text-decoration: none;
+    border: none;
+    background: none;
+}

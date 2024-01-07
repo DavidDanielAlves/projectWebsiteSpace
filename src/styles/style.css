@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #D0D6F9;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+  background: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../src/assets/imgs/home/background-home-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body header .container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em;
+}
+body header .container-header .container-menu {
+  position: absolute;
+  top: 2.5em;
+  right: 2em;
+}
+body header .container-header nav .container-navbar {
+  background-color: transparent;
+  height: 100vh;
+  width: 255px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  -webkit-backdrop-filter: blur(82px);
+          backdrop-filter: blur(82px);
+  z-index: 1;
+}
+body header .container-header nav .container-navbar .container-close-menu {
+  align-self: flex-end;
+  margin-top: 2em;
+  margin-right: 2em;
+}
+body header .container-header nav .container-navbar .list-links {
+  margin-top: 15%;
+  margin-left: 10%;
+}
+body header .container-header nav .container-navbar .list-links li {
+  margin-bottom: 32px;
+}
+body header .container-header nav .container-navbar .list-links li a {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  gap: 11px;
+}
+body header .container-header nav .container-navbar .list-links li a p {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+body header .container-header nav .container-navbar .list-links li a .numeration-link {
+  font-weight: 700;
+}
+body header .container-header nav .container-navbar .list-links li a .name-link {
+  font-weight: 500;
+  font-size: 1em;
+}
+body header .container-header nav .container-navbar .list-links li a.active {
+  border-right: 3px solid #fff;
+}
+body header .container-header nav .container-navbar.hidden {
+  display: none;
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+}
+body main .primary {
+  height: 85vh;
+}
+body main .primary .container-primary {
+  height: 95%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+body main .primary .container-primary .container-description {
+  text-align: center;
+  margin-top: 10%;
+}
+body main .primary .container-primary .container-description h3 {
+  font-size: 20.8px;
+}
+body main .primary .container-primary .container-description h2 {
+  font-size: 96px;
+  margin: 16px 0;
+  color: #fff;
+  font-family: "Bellefair", serif;
+}
+body main .primary .container-primary .container-description p {
+  width: 75%;
+  margin: auto;
+  font-family: "Barlow", sans-serif;
+}
+body main .primary .container-primary a {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 100%;
+  font-family: "Bellefair", serif;
+  font-size: 32px;
+  color: #0B0D17;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.destination {
+  background-image: url("../../../src/assets/imgs/destination/background-destination-mobile.jpg");
+}
+.destination main .destination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.destination main .destination h2 {
+  display: flex;
+  gap: 8px;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.destination main .destination h2 p {
+  font-size: 1em;
+}
+.destination main .destination h2 .numeration {
+  color: #979797;
+  font-weight: 700;
+}
+.destination main .destination h2 .title {
+  color: white;
+}
+.destination main .destination .main-image {
+  width: 50%;
+  margin: 32px 0;
+}
+.destination main .destination nav .list-planets {
+  display: flex;
+  gap: 32px;
+}
+.destination main .destination nav .list-planets li {
+  padding-bottom: 0.5em;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.destination main .destination nav .list-planets li h3 {
+  text-transform: uppercase;
+}
+.destination main .destination nav .list-planets li.active {
+  border-bottom: 4px solid #fff;
+}
+.destination main .destination nav .list-planets li.active h3 {
+  color: white;
+}
+.destination main .destination .container-description-planet {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.destination main .destination .container-description-planet p {
+  font-family: "Barlow", sans-serif;
+}
+.destination main .destination .container-description-planet h2 {
+  font-size: 4.5em;
+  margin-top: 8px;
+  color: white;
+  font-family: "Bellefair", serif;
+}
+.destination main .destination .container-distance {
+  text-align: center;
+  margin-top: 2em;
+}
+.destination main .destination .container-distance .title-distance {
+  font-family: "Barlow Condensed", sans-serif;
+  margin-bottom: 0.5em;
+}
+.destination main .destination .container-distance #distance {
+  font-size: 2em;
+  color: white;
+  font-family: "Bellefair", serif;
+}
+.destination main .destination .container-travel-time {
+  margin: 2em 0;
+  text-align: center;
+}
+.destination main .destination .container-travel-time .title {
+  font-family: "Barlow Condensed", sans-serif;
+  margin-bottom: 0.5em;
+}
+.destination main .destination .container-travel-time #days {
+  font-size: 2em;
+  color: white;
+  font-family: "Bellefair", serif;
+}
+
+.crew {
+  background-image: url("../../../src/assets/imgs/crew/background-crew-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+.crew main .crew .container-crew {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.crew main .crew .container-crew h2 {
+  display: flex;
+  gap: 8px;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.crew main .crew .container-crew h2 p {
+  font-size: 1em;
+}
+.crew main .crew .container-crew h2 .paragraph-numeration {
+  color: #979797;
+  font-weight: 700;
+}
+.crew main .crew .container-crew h2 .paragraph-title {
+  color: white;
+}
+.crew main .crew .container-crew img {
+  width: 50%;
+  margin-top: 10%;
+}
+.crew main .crew .container-crew hr {
+  width: 90%;
+  border-top: 1px solid rgba(151, 151, 151, 0.6470588235);
+}
+.crew main .crew .container-crew .container-pagination {
+  width: 28%;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.crew main .crew .container-crew .container-pagination .ball {
+  width: 10px;
+  height: 10px;
+  background-color: #979797;
+  border-radius: 100%;
+}
+.crew main .crew .container-crew .container-pagination .ball.active {
+  background-color: white;
+}
+.crew main .crew .container-crew .container-description {
+  text-align: center;
+  width: 90%;
+  margin-top: 5%;
+}
+.crew main .crew .container-crew .container-description #office {
+  font-size: 1.1em;
+  font-family: "Bellefair", serif;
+  margin-bottom: 8px;
+  color: #979797;
+}
+.crew main .crew .container-crew .container-description #name {
+  font-size: 1.5em;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 16px;
+}/*# sourceMappingURL=style.css.map */
