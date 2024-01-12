@@ -46,36 +46,36 @@ body {
                         margin-top: 15%;
                         margin-left: 10%;
 
-                       li {
-                        margin-bottom: 32px;
-                        
-                        a {
-                            display: flex;
-                            align-items: center;
-                            padding: 5px 0;
-                            gap: 11px;
+                        li {
+                            margin-bottom: 32px;
 
-                            p {
-                                font-family: $font-barlow-condensed;
-                                color: $white;
-                                text-transform: uppercase;
+                            a {
+                                display: flex;
+                                align-items: center;
+                                padding: 5px 0;
+                                gap: 11px;
+
+                                p {
+                                    font-family: $font-barlow-condensed;
+                                    color: $white;
+                                    text-transform: uppercase;
+                                }
+
+                                .numeration-link {
+                                    font-weight: 700;
+                                }
+
+                                .name-link {
+                                    font-weight: 500;
+                                    font-size: 1em;
+                                }
                             }
 
-                            .numeration-link {
-                                font-weight: 700;
+                            a.active {
+                                border-right: 3px solid $white;
                             }
 
-                            .name-link {
-                                font-weight: 500;
-                                font-size: 1em;
-                            }
                         }
-
-                        a.active {
-                            border-right: 3px solid $white;
-                        }
-
-                       }
                     }
                 }
 
@@ -139,4 +139,133 @@ body {
         }
     }
 
+}
+
+@media (min-width: 768px) {
+    body {
+        background-image: url('../../../src/assets/imgs/home/background-home-tablet.jpg');
+        background-position: 100%;
+
+        header {
+            .container-header {
+
+                .container-menu {
+                    button {
+                        display: none;
+                    }
+                }
+
+                nav {
+                    .container-navbar {
+                        height: fit-content;
+                        flex-direction: row;
+
+                        .container-close-menu {
+                            button {
+                                display: none;
+                            }
+                        }
+
+                        .list-links {
+                            margin: 0;
+                            display: flex;
+                            position: absolute;
+                            padding: 0 32px;
+                            gap: 32px;
+                            right: 0;
+                            background-color: #9797971d;
+
+                            li {
+                                margin: 0;
+
+                                a {
+                                    padding-bottom: 10px;
+                                    border-left: none;
+                                    padding: 2em 0;
+                                }
+
+                                a.active {
+                                    border-right: none;
+                                    border-bottom: 3px solid white;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .container-navbar.hidden {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        main {
+            .primary {
+                height: 100vh;
+
+                .container-primary {
+                    height: 95%;
+
+                    .container-description {
+                        margin-top: 5%;
+
+                        h3 {
+                            font-size: 1.2em;
+                        }
+
+                        h2 {
+                            font-size: 150px;
+                        }
+
+                        p {
+                            width: 60%;
+                        }
+                    }
+
+                    a {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1440px) {
+    body {
+        background-image: url('../../../src/assets/imgs/home/background-home-desktop.jpg');
+
+        header {
+            .container-header {
+                nav {
+                    .container-navbar {
+                        .list-links {
+                            background-color: #9797974f;
+                            backdrop-filter: blur(100px);
+                            padding-right: 250px;
+                            padding-left: 100px;
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            .primary {
+                width: 90vw;
+                height: 80vh;
+
+                .container-primary {
+                    flex-direction: row;
+
+                    .container-description {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
 }

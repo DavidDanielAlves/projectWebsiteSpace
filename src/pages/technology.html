@@ -4,8 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <script type="module" src="../../src/app/technology.js" defer></script>
+
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
+
 </head>
-<body>
-    
+<body class="technology">
+    <header>
+        <div class="container-header">
+            <h1><a href="../index.html"><img src="../assets/shared/logo.svg" alt="formato de estrela com funco branco"></a></h1>
+            
+            <div class="container-menu">
+                <button id="open-menu"><img src="../assets/shared/icon-hamburger.svg" alt="icone de menu hamburger"></button>
+            </div>
+            
+            <nav>
+
+                <div class="container-navbar hidden">
+                    <div class="container-close-menu">
+                        <button id="button-close-menu"><img src="../assets/shared/icon-close.svg" alt="icone de x"></button>
+                    </div>
+
+                    <ul class="list-links">
+                        <li>
+                            <a href="../index.html">
+                                <p class="numeration-link">00</p>
+                                <p class="name-link">Home</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../pages/destination.html">
+                                <p class="numeration-link">01</p>
+                                <p class="name-link">Destination</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../pages/crew.html">
+                                <p class="numeration-link">02</p>
+                                <p class="name-link">Crew</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../pages/technology.html" class="active">
+                                <p class="numeration-link">03</p>
+                                <p class="name-link">Technology</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="technology">
+            <h2>
+                <p class="numeration">03</p>
+                <p class="title">SPACE LAUNCH 101</p>
+            </h2>
+            
+            <div class="container-technology">
+                <img src="../../src/assets/imgs/technology/image-launch-vehicle-landscape.jpg" alt="espaçonave landscape" id="main-image">
+
+                <nav>
+                    <div class="container-navegation active">
+                        <div class="item-navegation">
+                            <p class="numeration">1</p>
+                        </div>
+                    </div>
+
+                    <div class="container-navegation">
+                        <div class="item-navegation">
+                            <p class="numeration">2</p>
+                        </div>
+                    </div>
+
+                    <div class="container-navegation">
+                        <div class="item-navegation">
+                            <p class="numeration">3</p>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="container-description">
+                    <h4>The termology...</h4>
+                    <h3 id="rocket-name">Launch Vehicle</h3>
+                    <p id="paragraph">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+                </div>
+            </div>
+        </section>
+        
+
+        </div>
+    </main>
 </body>
 </html>

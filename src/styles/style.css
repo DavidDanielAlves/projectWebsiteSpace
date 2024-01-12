@@ -6,6 +6,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -133,8 +135,94 @@ body main .primary .container-primary a {
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  body {
+    background-image: url("../../../src/assets/imgs/home/background-home-tablet.jpg");
+    background-position: 100%;
+  }
+  body header .container-header .container-menu button {
+    display: none;
+  }
+  body header .container-header nav .container-navbar {
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-direction: row;
+  }
+  body header .container-header nav .container-navbar .container-close-menu button {
+    display: none;
+  }
+  body header .container-header nav .container-navbar .list-links {
+    margin: 0;
+    display: flex;
+    position: absolute;
+    padding: 0 32px;
+    gap: 32px;
+    right: 0;
+    background-color: rgba(151, 151, 151, 0.1137254902);
+  }
+  body header .container-header nav .container-navbar .list-links li {
+    margin: 0;
+  }
+  body header .container-header nav .container-navbar .list-links li a {
+    padding-bottom: 10px;
+    border-left: none;
+    padding: 2em 0;
+  }
+  body header .container-header nav .container-navbar .list-links li a.active {
+    border-right: none;
+    border-bottom: 3px solid white;
+  }
+  body header .container-header nav .container-navbar.hidden {
+    display: flex;
+  }
+  body main .primary {
+    height: 100vh;
+  }
+  body main .primary .container-primary {
+    height: 95%;
+  }
+  body main .primary .container-primary .container-description {
+    margin-top: 5%;
+  }
+  body main .primary .container-primary .container-description h3 {
+    font-size: 1.2em;
+  }
+  body main .primary .container-primary .container-description h2 {
+    font-size: 150px;
+  }
+  body main .primary .container-primary .container-description p {
+    width: 60%;
+  }
+  body main .primary .container-primary a {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    background-image: url("../../../src/assets/imgs/home/background-home-desktop.jpg");
+  }
+  body header .container-header nav .container-navbar .list-links {
+    background-color: rgba(151, 151, 151, 0.3098039216);
+    -webkit-backdrop-filter: blur(100px);
+            backdrop-filter: blur(100px);
+    padding-right: 250px;
+    padding-left: 100px;
+  }
+  body main .primary {
+    width: 90vw;
+    height: 80vh;
+  }
+  body main .primary .container-primary {
+    flex-direction: row;
+  }
+  body main .primary .container-primary .container-description {
+    width: 50%;
+  }
+}
 .destination {
   background-image: url("../../../src/assets/imgs/destination/background-destination-mobile.jpg");
+  background-size: 100%;
 }
 .destination main .destination {
   display: flex;
@@ -142,44 +230,60 @@ body main .primary .container-primary a {
   justify-content: center;
   flex-direction: column;
 }
-.destination main .destination h2 {
+.destination main .destination .primary-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.destination main .destination .primary-container h2 {
   display: flex;
   gap: 8px;
   text-transform: uppercase;
   font-family: "Barlow Condensed", sans-serif;
 }
-.destination main .destination h2 p {
+.destination main .destination .primary-container h2 p {
   font-size: 1em;
 }
-.destination main .destination h2 .numeration {
+.destination main .destination .primary-container h2 .numeration {
   color: #979797;
   font-weight: 700;
 }
-.destination main .destination h2 .title {
+.destination main .destination .primary-container h2 .title {
   color: white;
 }
-.destination main .destination .main-image {
+.destination main .destination .primary-container .main-image {
   width: 50%;
   margin: 32px 0;
 }
-.destination main .destination nav .list-planets {
+.destination main .destination .secundary-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.destination main .destination .secundary-container nav .list-planets {
   display: flex;
   gap: 32px;
 }
-.destination main .destination nav .list-planets li {
+.destination main .destination .secundary-container nav .list-planets li {
   padding-bottom: 0.5em;
   font-family: "Barlow Condensed", sans-serif;
 }
-.destination main .destination nav .list-planets li h3 {
+.destination main .destination .secundary-container nav .list-planets li h3 {
   text-transform: uppercase;
 }
-.destination main .destination nav .list-planets li.active {
+.destination main .destination .secundary-container nav .list-planets li.active {
   border-bottom: 4px solid #fff;
 }
-.destination main .destination nav .list-planets li.active h3 {
+.destination main .destination .secundary-container nav .list-planets li.active h3 {
   color: white;
 }
-.destination main .destination .container-description-planet {
+.destination main .destination .secundary-container .division-containers {
+  display: flex;
+  flex-direction: column;
+}
+.destination main .destination .secundary-container .container-description-planet {
   width: 85%;
   display: flex;
   flex-direction: column;
@@ -187,42 +291,142 @@ body main .primary .container-primary a {
   justify-content: center;
   text-align: center;
 }
-.destination main .destination .container-description-planet p {
+.destination main .destination .secundary-container .container-description-planet p {
   font-family: "Barlow", sans-serif;
 }
-.destination main .destination .container-description-planet h2 {
+.destination main .destination .secundary-container .container-description-planet h2 {
   font-size: 4.5em;
   margin-top: 8px;
+  text-transform: uppercase;
   color: white;
   font-family: "Bellefair", serif;
 }
-.destination main .destination .container-distance {
+.destination main .destination .secundary-container .container-distance {
   text-align: center;
   margin-top: 2em;
 }
-.destination main .destination .container-distance .title-distance {
+.destination main .destination .secundary-container .container-distance .title-distance {
   font-family: "Barlow Condensed", sans-serif;
   margin-bottom: 0.5em;
 }
-.destination main .destination .container-distance #distance {
+.destination main .destination .secundary-container .container-distance #distance {
   font-size: 2em;
   color: white;
   font-family: "Bellefair", serif;
 }
-.destination main .destination .container-travel-time {
+.destination main .destination .secundary-container .container-travel-time {
   margin: 2em 0;
   text-align: center;
 }
-.destination main .destination .container-travel-time .title {
+.destination main .destination .secundary-container .container-travel-time .title {
   font-family: "Barlow Condensed", sans-serif;
   margin-bottom: 0.5em;
 }
-.destination main .destination .container-travel-time #days {
+.destination main .destination .secundary-container .container-travel-time #days {
   font-size: 2em;
   color: white;
   font-family: "Bellefair", serif;
 }
 
+@media (min-width: 768px) {
+  .destination {
+    background-image: url("../../../src/assets/imgs/destination/background-destination-tablet.jpg");
+  }
+  .destination main .destination .primary-container {
+    width: 100%;
+  }
+  .destination main .destination .primary-container .title-destination {
+    align-self: flex-start;
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: 1.2em;
+  }
+  .destination main .destination .primary-container #image-planet {
+    width: 35%;
+  }
+  .destination main .destination .secundary-container .container-description-planet #name-planet {
+    font-size: 80px;
+  }
+  .destination main .destination .secundary-container .container-description-planet #paragraph-description {
+    width: 60%;
+  }
+  .destination main .destination .secundary-container .division-containers {
+    flex-direction: row;
+    gap: 32px;
+  }
+  .destination main .destination .secundary-container .container-distance {
+    display: inline-block;
+  }
+  .destination main .destination .secundary-container .container-travel-time {
+    display: inline-block;
+  }
+}
+@media (min-width: 1440px) {
+  .destination {
+    background-image: url("../../../src/assets/imgs/destination/background-destination-desktop.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .destination header {
+    align-self: flex-start;
+  }
+  .destination header .container-header h1 {
+    align-self: flex-start;
+  }
+  .destination main .destination {
+    height: 100vh;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .destination main .destination .primary-container {
+    margin-top: 10%;
+    width: 50%;
+    height: 100vh;
+  }
+  .destination main .destination .primary-container .title-destination {
+    margin-left: 15%;
+    gap: 32px;
+  }
+  .destination main .destination .primary-container .title-destination p {
+    font-size: 28px;
+  }
+  .destination main .destination .primary-container #image-planet {
+    margin-top: 15%;
+    align-self: center;
+    width: 55%;
+  }
+  .destination main .destination .secundary-container {
+    width: 50%;
+    height: 100vh;
+  }
+  .destination main .destination .secundary-container nav {
+    margin-top: 15%;
+  }
+  .destination main .destination .secundary-container nav .list-planets li h3 {
+    font-size: 1.5em;
+  }
+  .destination main .destination .secundary-container .container-description-planet {
+    width: 100%;
+  }
+  .destination main .destination .secundary-container .container-description-planet p {
+    font-size: 20px;
+    margin: 3% 0;
+    text-align: start;
+  }
+  .destination main .destination .secundary-container .container-description-planet h2 {
+    margin-left: 20%;
+    margin-top: 3%;
+    align-self: flex-start;
+  }
+  .destination main .destination .secundary-container .division-containers {
+    border-top: 1px solid #979797;
+    margin-top: 18px;
+    justify-content: flex-start;
+    width: 60%;
+    gap: 20%;
+  }
+}
 .crew {
   background-image: url("../../../src/assets/imgs/crew/background-crew-mobile.jpg");
   background-size: cover;
@@ -252,46 +456,288 @@ body main .primary .container-primary a {
 .crew main .crew .container-crew h2 .paragraph-title {
   color: white;
 }
-.crew main .crew .container-crew img {
+.crew main .crew .container-crew .division-containers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.crew main .crew .container-crew .division-containers img {
   width: 50%;
   margin-top: 10%;
 }
-.crew main .crew .container-crew hr {
+.crew main .crew .container-crew .division-containers hr {
   width: 90%;
   border-top: 1px solid rgba(151, 151, 151, 0.6470588235);
 }
-.crew main .crew .container-crew .container-pagination {
-  width: 28%;
+.crew main .crew .container-crew .division-containers .inner-division .container-pagination {
+  width: 100%;
   display: flex;
   gap: 24px;
   justify-content: center;
-  align-items: center;
   margin-top: 10%;
 }
-.crew main .crew .container-crew .container-pagination .ball {
-  width: 10px;
-  height: 10px;
+.crew main .crew .container-crew .division-containers .inner-division .container-pagination .ball {
+  width: 15px;
+  height: 15px;
   background-color: #979797;
   border-radius: 100%;
 }
-.crew main .crew .container-crew .container-pagination .ball.active {
+.crew main .crew .container-crew .division-containers .inner-division .container-pagination .ball.active {
   background-color: white;
 }
-.crew main .crew .container-crew .container-description {
+.crew main .crew .container-crew .division-containers .inner-division .container-description {
   text-align: center;
-  width: 90%;
+  width: 100%;
+  margin: auto;
   margin-top: 5%;
 }
-.crew main .crew .container-crew .container-description #office {
-  font-size: 1.1em;
+.crew main .crew .container-crew .division-containers .inner-division .container-description #office {
+  font-size: 16px;
   font-family: "Bellefair", serif;
   margin-bottom: 8px;
   color: #979797;
+  text-transform: uppercase;
 }
-.crew main .crew .container-crew .container-description #name {
+.crew main .crew .container-crew .division-containers .inner-division .container-description #name {
   font-size: 1.5em;
   font-family: "Bellefair", serif;
   text-transform: uppercase;
   color: white;
   margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .crew main .crew .container-crew h2 {
+    align-self: flex-start;
+    margin-left: 2.5em;
+    margin-top: 1em;
+  }
+  .crew main .crew .container-crew h2 p {
+    font-size: 1.5em;
+  }
+  .crew main .crew .container-crew .division-containers {
+    flex-direction: column-reverse;
+  }
+  .crew main .crew .container-crew .division-containers hr {
+    border: none;
+  }
+  .crew main .crew .container-crew .division-containers img {
+    width: 30%;
+  }
+  .crew main .crew .container-crew .division-containers .container-description #office {
+    font-size: 1.5em;
+  }
+  .crew main .crew .container-crew .division-containers .container-description #name {
+    font-size: 2.5em;
+  }
+  .crew main .crew .container-crew .division-containers .container-description #description {
+    width: 70%;
+    margin: auto;
+    font-size: 18px;
+  }
+}
+@media (min-width: 1440px) {
+  .crew {
+    background-image: url("../../../src/assets/imgs/crew/background-crew-desktop.jpg");
+    background-size: 100%;
+  }
+  .crew main .crew .container-crew {
+    align-self: flex-start;
+  }
+  .crew main .crew .container-crew .division-containers {
+    flex-direction: row-reverse;
+    height: 100%;
+  }
+  .crew main .crew .container-crew .division-containers .inner-division {
+    display: flex;
+    height: 100%;
+    flex-direction: column-reverse;
+    margin-left: 5%;
+  }
+  .crew main .crew .container-crew .division-containers .inner-division .container-pagination {
+    justify-content: flex-start;
+    margin-top: 30%;
+    margin-left: 3%;
+  }
+  .crew main .crew .container-crew .division-containers .inner-division .container-description {
+    text-align: start;
+  }
+  .crew main .crew .container-crew .division-containers .inner-division .container-description #office {
+    font-size: 24px;
+  }
+  .crew main .crew .container-crew .division-containers .inner-division .container-description #name {
+    font-size: 2.5em;
+  }
+  .crew main .crew .container-crew .division-containers .inner-division .container-description #description {
+    width: 100%;
+    font-size: 20px;
+  }
+  .crew main .crew .container-crew .division-containers img {
+    width: 50%;
+    margin: 0;
+    margin-right: 10%;
+  }
+}
+.technology {
+  background-image: url("../../../src/assets/imgs/technology/background-technology-mobile.jpg");
+}
+.technology .technology h2 {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.technology .technology h2 .numeration {
+  color: #979797;
+  font-weight: 700;
+}
+.technology .technology h2 .title {
+  color: white;
+}
+.technology .technology .container-technology {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.technology .technology .container-technology img {
+  width: 100%;
+  height: 300px;
+  margin: 10% 0;
+  background-position: center;
+}
+.technology .technology .container-technology nav {
+  display: flex;
+  gap: 16px;
+}
+.technology .technology .container-technology nav .container-navegation {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #979797;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.technology .technology .container-technology nav .container-navegation .item-navegation {
+  width: 30px;
+  height: 30px;
+  background-color: #11121D;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.technology .technology .container-technology nav .container-navegation .item-navegation .numeration {
+  transform: rotate(-40deg);
+  font-family: "Bellefair", serif;
+}
+.technology .technology .container-technology nav .container-navegation.active {
+  background-color: white;
+}
+.technology .technology .container-technology nav .container-navegation.active .item-navegation {
+  background-color: white;
+}
+.technology .technology .container-technology nav .container-navegation.active .item-navegation .numeration {
+  font-size: 1.3em;
+  color: #0B0D17;
+}
+.technology .technology .container-technology .container-description {
+  text-align: center;
+  margin-top: 5%;
+}
+.technology .technology .container-technology .container-description h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.technology .technology .container-technology .container-description h3 {
+  font-size: 1.5em;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Bellefair", serif;
+  margin-bottom: 16px;
+}
+.technology .technology .container-technology .container-description p {
+  width: 85%;
+  margin: auto;
+  margin-bottom: 10%;
+}
+
+@media (min-width: 768px) {
+  .technology {
+    background-image: url("../../../src/assets/imgs/technology/background-technology-tablet.jpg");
+    background-size: cover;
+  }
+  .technology main .technology h2 {
+    justify-content: flex-start;
+    margin-top: 1em;
+    margin-left: 3em;
+  }
+  .technology main .technology h2 p {
+    font-size: 1.5em;
+  }
+  .technology main .technology .container-technology img {
+    width: 100%;
+    height: 500px;
+  }
+  .technology main .technology .container-technology nav .container-navegation {
+    width: 70px;
+    height: 70px;
+  }
+  .technology main .technology .container-technology nav .container-navegation .item-navegation {
+    width: 50px;
+    height: 50px;
+  }
+  .technology main .technology .container-technology nav .container-navegation.active .item-navegation .numeration {
+    font-size: 1.5em;
+  }
+  .technology main .technology .container-technology .container-description h4 {
+    font-size: 1.3em;
+  }
+  .technology main .technology .container-technology .container-description h3 {
+    font-size: 2.5em;
+  }
+  .technology main .technology .container-technology .container-description p {
+    width: 60%;
+  }
+}
+@media (min-width: 1440px) {
+  .technology {
+    background-image: url("../../../src/assets/imgs/technology/background-technology-desktop.jpg");
+  }
+  .technology main .technology .container-technology {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .technology main .technology .container-technology :nth-child(2) {
+    order: 1;
+  }
+  .technology main .technology .container-technology nav {
+    flex-direction: column;
+    margin: 0 5%;
+  }
+  .technology main .technology .container-technology img {
+    height: 80vh;
+    width: 35%;
+    margin: 0;
+  }
+  .technology main .technology .container-technology .container-description {
+    text-align: start;
+  }
+  .technology main .technology .container-technology .container-description h4 {
+    margin-left: 10%;
+  }
+  .technology main .technology .container-technology .container-description h3 {
+    margin-left: 10%;
+    font-size: 3.5em;
+  }
+  .technology main .technology .container-technology .container-description p {
+    margin-left: 10%;
+    font: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

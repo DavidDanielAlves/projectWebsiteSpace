@@ -2,6 +2,7 @@
 
 .destination {
     background-image: url('../../../src/assets/imgs/destination/background-destination-mobile.jpg');
+    background-size: 100%;
 
     main {
         .destination {
@@ -10,104 +11,269 @@
             justify-content: center;
             flex-direction: column;
 
-            h2 {
+            .primary-container {
                 display: flex;
-                gap: 8px;
-                text-transform: uppercase;
-                font-family: $font-barlow-condensed;
-
-                p {
-                    font-size: 1em;
-                }
-
-                .numeration {
-                    color: #979797;
-                    font-weight: 700;
-                }
-
-                .title {
-                    color: white;
-                }
-            }
-
-            .main-image {
-                width: 50%;
-                margin: 32px 0;
-            }
-
-            nav {
-                .list-planets {
-                    display: flex;
-                    gap: 32px;
-
-                    li {
-                        padding-bottom: 0.5em;
-                        font-family: $font-barlow-condensed;
-
-                        h3 {
-                            text-transform: uppercase;
-                        }
-                    }
-
-                    li.active {
-                        border-bottom: 4px solid #fff;
-
-                        h3 {
-                            color: white;
-                        }
-                    }
-                }
-            }
-
-            .container-description-planet {
-                width: 85%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
                 justify-content: center;
-                text-align: center;
-
-                p {
-                    font-family: $font-barlow;
-                }
+                align-items: center;
+                flex-direction: column;
 
                 h2 {
-                    font-size: 4.5em;
-                    margin-top: 8px;
-                    color: white;
-                    font-family: $font-bellefair;
+                    display: flex;
+                    gap: 8px;
+                    text-transform: uppercase;
+                    font-family: $font-barlow-condensed;
+    
+                    p {
+                        font-size: 1em;
+                    }
+    
+                    .numeration {
+                        color: #979797;
+                        font-weight: 700;
+                    }
+    
+                    .title {
+                        color: white;
+                    }
+                }
+    
+                .main-image {
+                    width: 50%;
+                    margin: 32px 0;
                 }
             }
 
-            .container-distance {
-                text-align: center;
-                margin-top: 2em;
+            .secundary-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
 
-                .title-distance {
-                    font-family: $font-barlow-condensed;
-                    margin-bottom: 0.5em;
+                nav {
+                    .list-planets {
+                        display: flex;
+                        gap: 32px;
+    
+                        li {
+                            padding-bottom: 0.5em;
+                            font-family: $font-barlow-condensed;
+    
+                            h3 {
+                                text-transform: uppercase;
+                            }
+                        }
+    
+                        li.active {
+                            border-bottom: 4px solid #fff;
+    
+                            h3 {
+                                color: white;
+                            }
+                        }
+                    }
                 }
-
-                #distance {
-                    font-size: 2em;
-                    color: white;
-                    font-family: $font-bellefair;
+    
+                .division-containers {
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                .container-description-planet {
+                    width: 85%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+    
+                    p {
+                        font-family: $font-barlow;
+                    }
+    
+                    h2 {
+                        font-size: 4.5em;
+                        margin-top: 8px;
+                        text-transform: uppercase;
+                        color: white;
+                        font-family: $font-bellefair;
+                    }
+                }
+    
+                .container-distance {
+                    text-align: center;
+                    margin-top: 2em;
+    
+                    .title-distance {
+                        font-family: $font-barlow-condensed;
+                        margin-bottom: 0.5em;
+                    }
+    
+                    #distance {
+                        font-size: 2em;
+                        color: white;
+                        font-family: $font-bellefair;
+                    }
+                }
+    
+                .container-travel-time {
+                    margin: 2em 0;
+                    text-align: center;
+    
+                    .title {
+                        font-family: $font-barlow-condensed;
+                        margin-bottom: 0.5em;
+                    }
+    
+                    #days {
+                        font-size: 2em;
+                        color: white;
+                        font-family: $font-bellefair;
+                    }
                 }
             }
 
-            .container-travel-time {
-                margin: 2em 0;
-                text-align: center;
+        }
+    }
+}
 
-                .title {
-                    font-family: $font-barlow-condensed;
-                    margin-bottom: 0.5em;
+@media (min-width: 768px) {
+    .destination {
+        background-image: url('../../../src/assets/imgs/destination/background-destination-tablet.jpg');
+
+        main {
+            .destination {
+                .primary-container {
+                    width: 100%;
+
+                    .title-destination {
+                        align-self: flex-start;
+                        margin-left: 5%;
+                        margin-top: 5%;
+                        font-size: 1.2em;
+                    }
+        
+                    #image-planet {
+                        width: 35%;
+                    }
                 }
 
-                #days {
-                    font-size: 2em;
-                    color: white;
-                    font-family: $font-bellefair;
+                .secundary-container {
+                    .container-description-planet {
+                        #name-planet {
+                            font-size: 80px;
+                        }
+        
+                        #paragraph-description {
+                            width: 60%;
+                        }
+                    }
+        
+                    .division-containers {
+                        flex-direction: row;
+                        gap: 32px;
+                    }
+                    
+                    .container-distance {
+                        display: inline-block;
+                    }
+        
+                    .container-travel-time {
+                        display: inline-block;
+                    }
+                }
+                
+            }
+
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .destination {
+        background-image: url('../../../src/assets/imgs/destination/background-destination-desktop.jpg');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        header {
+            align-self: flex-start;
+
+            .container-header {
+                h1 {
+                    align-self: flex-start;
+                }
+            }
+        }
+
+        main {
+            .destination {
+                height: 100vh;
+                flex-direction: row;
+                justify-content: space-around;
+
+                .primary-container {
+                    margin-top: 10%;
+                    width: 50%;
+                    height: 100vh;
+
+                    .title-destination {
+                        margin-left: 15%;
+                        gap: 32px;
+
+                        p {
+                            font-size: 28px;
+                        }
+                    }
+
+                    #image-planet {
+                        margin-top: 15%;
+                        align-self: center;
+                        width: 55%;
+                    }
+                }
+
+                .secundary-container {
+                    width: 50%;
+                    height: 100vh;
+
+                    nav {
+                        margin-top: 15%;
+
+                        .list-planets {
+                            li {
+                                h3 {
+                                    font-size: 1.5em;
+                                }
+                            }
+                        }
+                    }
+
+                    .container-description-planet {
+                        width: 100%;
+
+                        p {
+                            font-size: 20px;
+                            margin: 3% 0;
+                            text-align: start;
+                        }
+
+                        h2 {
+                            margin-left: 20%;
+                            margin-top: 3%;
+                            align-self: flex-start;
+                        }
+                        
+                    }
+
+                    .division-containers {
+                        border-top: 1px solid #979797;
+                        margin-top: 18px;
+                        justify-content: flex-start;
+                        width: 60%;
+                        gap: 20%;
+                    }
+
+
                 }
             }
         }

@@ -1,0 +1,226 @@
+@import '../base/variaveis/font';
+@import '../base/variaveis/technology.scss';
+
+.technology {
+    background-image: url('../../../src/assets/imgs/technology/background-technology-mobile.jpg');
+
+    .technology {
+        h2 {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            text-transform: uppercase;
+            font-family: $font-barlow-condensed;
+
+            .numeration {
+                color: #979797;
+                font-weight: 700;
+            }
+
+            .title {
+                color: white;
+            }
+
+        }
+
+        .container-technology {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                height: 300px;
+                margin: 10% 0;
+                background-position: center;
+            }
+
+            nav {
+                display: flex;
+                gap: 16px;
+
+                .container-navegation {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100%;
+                    background-color: #979797;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .item-navegation {
+                        width: 30px;
+                        height: 30px;
+                        background-color: #11121D;
+                        transform: rotate(45deg);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .numeration {
+                            transform: rotate(-40deg);
+                            font-family: $font-bellefair;
+                        }
+                    }
+                }
+
+                .container-navegation.active {
+                    background-color: white;
+
+                    .item-navegation {
+                        background-color: white;
+
+                        .numeration {
+                            font-size: 1.3em;
+                            color: #0B0D17;
+                        }
+                    }
+                }
+
+            }
+
+            .container-description {
+                text-align: center;
+                margin-top: 5%;
+
+                h4 {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    margin-bottom: 8px;
+                }
+
+                h3 {
+                    font-size: 1.5em;
+                    color: white;
+                    text-transform: uppercase;
+                    font-family: $font-bellefair;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    width: 85%;
+                    margin: auto;
+                    margin-bottom: 10%;
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .technology {
+        background-image: url('../../../src/assets/imgs/technology/background-technology-tablet.jpg');
+        background-size: cover;
+
+        main {
+            .technology {
+                h2 {
+                    justify-content: flex-start;
+                    margin-top: 1em;
+                    margin-left: 3em;
+
+                    p {
+                        font-size: 1.5em;
+                    }
+                }
+
+                .container-technology {
+
+                    img {
+                        width: 100%;
+                        height: 500px;
+                    }
+
+                    nav {
+                        .container-navegation {
+                            width: 70px;
+                            height: 70px;
+
+                            .item-navegation {
+                                width: 50px;
+                                height: 50px;
+
+                            }
+                        }
+
+                        .container-navegation.active {
+                            .item-navegation {
+                                .numeration {
+                                    font-size: 1.5em;
+                                }
+                            }
+                        }
+                    }
+
+                    .container-description {
+                        h4 {
+                            font-size: 1.3em;
+                        }
+
+                        h3 {
+                            font-size: 2.5em;
+                        }
+
+                        p {
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .technology {
+        background-image: url('../../../src/assets/imgs/technology/background-technology-desktop.jpg');
+
+        main {
+            .technology {
+                .container-technology {
+                    flex-direction: row-reverse;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+
+                    :nth-child(2) {
+                        order: 1;
+                    }
+
+                    nav {
+                        flex-direction: column;
+                        margin: 0 5%;
+                    }
+
+                    img {
+                        height: 80vh;
+                        width: 35%;
+                        margin: 0;
+                    }
+
+                    .container-description {
+                        text-align: start;
+
+                        h4 {
+                            margin-left: 10%;
+                        }
+
+                        h3 {
+                            margin-left: 10%;
+                            font-size: 3.5em;
+                        }
+
+                        p {
+                            margin-left: 10%;
+                            font: 20px;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}
